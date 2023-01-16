@@ -7,6 +7,7 @@ app.use(helmet.hsts({
     maxAge: 31536000,
     includeSubDomains: true,
 }));
+app.use(helmet.frameguard({action: 'sameorigin'}));
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
