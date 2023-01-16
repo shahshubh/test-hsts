@@ -13,7 +13,7 @@ app.use(helmet.crossOriginResourcePolicy({
 }));
 
 app.get('/', (req, res) => {
-    res.send('Hey there!');
+    res.send('Hey hello');
     }
 );
 
