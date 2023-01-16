@@ -8,6 +8,9 @@ app.use(helmet.hsts({
     includeSubDomains: true,
 }));
 app.use(helmet.frameguard({action: 'sameorigin'}));
+app.use(helmet.crossOriginResourcePolicy({
+    policy: 'cross-origin'
+}));
 
 app.get('/', (req, res) => {
     res.send('Hey there!');
