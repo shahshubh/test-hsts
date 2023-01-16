@@ -13,5 +13,8 @@ app.get('/', (req, res) => {
     }
 );
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'));
+// listen on port which is to be deployed
+app.listen(process.env.PORT || 3000, () => {
+    console.log('Listening on port 3000');
+});
 
