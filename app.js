@@ -10,7 +10,7 @@ app.use(helmet.hsts({
 app.use(helmet.frameguard({action: 'sameorigin'}));
 
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+    res.send('Hey there!');
     }
 );
 
