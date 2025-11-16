@@ -1,16 +1,17 @@
 {
-  "name": "numo-nodejs",
+  "name": "ipo-notification-server",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Express server that notifies about IPOs closing today via Telegram",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2",
-    "helmet": "^6.0.1"
+    "axios": "^1.13.2",
+    "dayjs": "^1.11.19",
+    "express": "^4.18.2"
   }
 }
