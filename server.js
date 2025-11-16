@@ -23,7 +23,10 @@ const PORT = process.env.PORT || 3000;
 // Escape special characters for Telegram Markdown V2
 function escapeMarkdownV2(text) {
   if (!text) return '';
-  return String(text).replace(/([_*\[\]()~`>#+\-=|{}.!])/g, '\\$1');
+  // First escape backslashes, then escape other special characters
+  return String(text)
+    .replace(/\\/g, '\\\\')
+    .replace(/([_*\[\]()~`>#+\-=|{}.!])/g, '\\$1');
 }
 
 // Extract closing date from IPO object
